@@ -1,0 +1,25 @@
+<div class="input-group input-group-sm mb-3">
+    
+    <input type="text" class="form-control" #box aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+  </div>
+
+  <div>
+    <button (click)="save(box.value)" class="btn btn-outline-success">Save</button>
+  </div>
+
+  <div>
+    <ul>
+        <li *ngFor="let todo of todos">{{todo.todo}} <button (click)="delete(todo.id)" class="btn btn-outline-danger">Delete</button>
+        <button (click)="onComplete(todo)" class="btn btn-outline-warning">Completed</button></li>
+    </ul>
+  </div>
+  
+  <div>
+    <ul>
+   <h3>Completed List</h3>
+        <li *ngFor="let complete of completed">{{complete.todo}} 
+          <button (click)="finalDelete(complete.id)" class="btn btn-outline-danger">delete</button></li>
+    </ul>
+  </div>
+
+

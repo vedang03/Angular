@@ -1,0 +1,50 @@
+<button class="btn btn-primary">Save</button>
+
+<div *ngIf="show ; then ifBlock else elseBlock"></div>
+<ng-template #ifBlock>Show is true</ng-template>
+<ng-template #elseBlock>Show is false</ng-template>
+
+<ng-template [ngIf]="color=='blue'"><h1 style="color: blue">Text in blue</h1></ng-template>
+<ng-template [ngIf]="color=='red'"><h1 style="color: red">Text in red</h1></ng-template>
+
+<h1 *ngIf="color=='red' " style="color: red;">Text in red</h1>
+<hr>
+<div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'green'" style="color:green;">green</h1>
+</div>
+<hr>
+<div >
+  <ul>
+    <li *ngFor="let player of players">{{player}}</li>
+  </ul>
+</div>
+<hr>
+<table class="table table-striped table-warning">
+  <thead>
+    <th>id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.firstname}}</td>
+      <td>{{student.lastname}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+
+<div class="input-group input-group-sm mb-3">
+  <input type="text" class="form-control" #box aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div>
+  <button (click)="onSave(box.value)" class="btn btn-outline-success">Submit</button>
+</div>
+<div>
+  <ul>
+    <li (click)="delete(todo.id)" *ngFor="let todo of todos">Todo no: {{todo.id}} {{todo.todo}}</li>
+      
+  </ul>
+</div>
+<app-todos></app-todos>
