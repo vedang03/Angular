@@ -1,0 +1,58 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group m-3 col-sm-5">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      ngModel
+      name="email"
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      required
+      #email="ngModel"
+    
+    />
+    <span
+      class="form-text"
+      *ngIf="email.touched && email.invalid && email.errors?.['required']"
+      >Email is required</span
+    >
+
+  </div>
+  <div class="form-group m-3 col-sm-5"> 
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      ngModel
+      name="password"
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      required
+      #password = "ngModel"
+    />
+    <span class="form-text"
+    *ngIf="password.touched && password.invalid && password.errors?.['required']">
+     Password is required</span>
+  </div>
+  <div class="form-check m-3">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <div class="col-sm-5">
+    <select ngModel name="optionValue" class="form-select m-3">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <button
+    [disabled]="f.status == 'INVALID'"
+    type="submit "
+    class="btn btn-primary m-3"
+  >
+    Submit
+  </button>
+</form>

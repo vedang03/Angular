@@ -10,7 +10,7 @@ export class TodosComponent {
    id=0
 
    save(value:string){
-      if(value.length!=0){
+      if(value.length!=0 &&  value!=' '){
       this.todos.push({id:this.id++ , todo:value})
       }
    }

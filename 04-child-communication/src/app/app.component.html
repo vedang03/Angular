@@ -1,0 +1,17 @@
+<!-- <app-child [xyz]="dataValue" (outputData)="dataFromChild($event)"></app-child>
+<h1>{{userValue}}</h1> -->
+
+<app-input-movies (outputMovie)="movieFromChild($event)" 
+                  (outputDescription)="descriptionFromChild($event)"
+
+                  >
+                
+                </app-input-movies>
+
+                  
+
+
+
+<app-display-movie 
+
+*ngFor="let movie of moviesList"[movies]="movie"></app-display-movie>

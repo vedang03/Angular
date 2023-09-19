@@ -1,0 +1,70 @@
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="form-group m-3 col-sm-5">
+    <label for="usr">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Name"
+      formControlName="userName"
+    />
+    <span
+      class="form-text"
+      *ngIf="
+        !userForm.get('userName')?.valid && userForm.get('userName')?.touched
+      "
+      >User name cannot be empty</span
+      >
+      <div *ngIf="userForm.get('userName')?.errors?.['minlength']">Name must be atleast of 3 characters.</div>
+  </div>
+
+  <div class="form-group m-3 col-sm-5">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      formControlName="email"
+    />
+    <span
+      class="form-text"
+      *ngIf="!userForm.get('email')?.valid && userForm.get('email')?.touched"
+      >Email cannot be empty</span
+    >
+  </div>
+
+  <div class="form-check m-3">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <div class="col-sm-5">
+    <select class="form-select m-3" formControlName="number">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="radio m-3" *ngFor="let gender of genders">
+      <label>
+        <input type="radio" formControlName="gender" [value]="gender" />{{
+          gender
+        }}
+      </label>
+    </div>
+  </div>
+  <button
+    type="submit "
+    class="btn btn-primary m-3"
+    [disabled]="!userForm.valid"
+  >
+    Submit
+  </button>
+  <button [disabled]="!userForm.valid" (click)="reset()" class="btn btn-secondary">Reset</button>
+</form>
+<label for="reactiveformexample">Name: </label>
+<input type="text" [formControl]="name" >
+<button class="btn btn-success btn-sm m-3" (click)="updateName()">Display</button>
+<p>{{name.value}}</p> -->
+
+<app-profile-editor></app-profile-editor>

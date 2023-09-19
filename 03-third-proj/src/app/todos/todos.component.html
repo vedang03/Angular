@@ -9,8 +9,8 @@
 
   <div>
     <ul>
-        <li *ngFor="let todo of todos">{{todo.todo}} <button (click)="delete(todo.id)" class="btn btn-outline-danger">Delete</button>
-        <button (click)="onComplete(todo)" class="btn btn-outline-warning">Completed</button></li>
+        <li *ngFor="let todo of todos">{{todo.todo}} <button (click)="delete(todo.id)" class="btn btn-outline-danger btn-sm">Delete</button>
+        <button (click)="onComplete(todo)" class="btn btn-outline-success btn-sm m-3 " >Completed</button></li>
     </ul>
   </div>
   
@@ -18,7 +18,7 @@
     <ul>
    <h3>Completed List</h3>
         <li *ngFor="let complete of completed">{{complete.todo}} 
-          <button (click)="finalDelete(complete.id)" class="btn btn-outline-danger">delete</button></li>
+          <button (click)="finalDelete(complete.id)" class="btn btn-outline-danger btn-sm">delete</button></li>
     </ul>
   </div>
 

@@ -1,0 +1,10 @@
+<input type="text" #box1 placeholder="Enter Movie name" class="mt-4" />
+<div>
+  <input type="text" #box2 placeholder="Enter movie description" class="mt-4" />
+</div>
+<button
+  class="btn btn-outline-success btn-sm mt-3 p-2"
+  (click)="onSave(box1.value, box2.value)"
+>
+  Save
+</button>
