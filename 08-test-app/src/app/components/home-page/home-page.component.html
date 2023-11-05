@@ -1,0 +1,20 @@
+<div>
+  
+  <h1>Weather App!!</h1>
+
+  <form >
+    <input class="text-info-emphasis m-2"  type="text" name="cityName" [(ngModel)]="city">
+    <button  class="btn btn-outline-success btn-sm m-3"  (click)="getWeather()">Get Weather</button>
+  </form>
+
+
+
+<div *ngIf="weatherDataa" class="card text-white bg-info mb-3 m-3" style="max-width: 18rem;">
+  <div class="card-header text-md-center">Weather App</div>
+  <div class="card-body">
+    <h2 class="card-title text-md-center">{{weatherDataa.name }}</h2>
+    <p class="card-text text-md-center">Temperature: {{weatherDataa.main.temp}}°</p>
+    <p  class="card-title text-md-center">Humidity: {{weatherDataa.main.humidity}}</p>
+    <p  class="card-title text-md-center">Description: {{weatherDataa.weather[0].description}}</p>
+  </div>
+</div>
